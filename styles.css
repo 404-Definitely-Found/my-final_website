@@ -1,8 +1,37 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
 body {
-    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
-h1 {
-    text-align: center;
-    color: yellow;
+.typewriter {
+    white-space: pre-wrap;
+    overflow: hidden;
+    position: relative;
 }
+
+.random-char {
+    display: inline;
+    animation: blink 0.5s steps(1) infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.roboto-mono-unique {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 239;
+    font-style: normal;
+} */
