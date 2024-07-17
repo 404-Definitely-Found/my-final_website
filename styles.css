@@ -1,8 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
-
 body {
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -10,9 +9,11 @@ body {
 }
 
 .typewriter {
+    font-family: monospace;
     white-space: pre-wrap;
     overflow: hidden;
     position: relative;
+    font-size: 7em;
 }
 
 .random-char {
@@ -24,14 +25,29 @@ body {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }
 }
 
-.roboto-mono-unique {
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 239;
-    font-style: normal;
-} */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    opacity: 0; /* Start hidden */
+    transition: opacity 2s ease-in-out; /* Fade-in effect */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    opacity: 0;
+}

@@ -4,71 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typewriter Effect</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .typewriter {
-            font-family: monospace;
-            white-space: pre-wrap;
-            overflow: hidden;
-            position: relative;
-            font-size: 7em;
-        }
-
-        .random-char {
-            display: inline;
-            animation: blink 0.5s steps(1) infinite alternate;
-        }
-
-        @keyframes blink {
-            from {
-                opacity: 1;
-            }
-
-            to {
-                opacity: 0;
-            }
-        }
-    </style>
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div id="typewriter" class="typewriter"></div>
-    <script>
-        const text = `hi 
-i'm
-Chinmay
-(website coming soon)`;
-        const randomEmojis = ['😀', '😁', '😂', '🤣', '😃', '😄', '😅', '😆', '😉', '😊', '😋', '😎', '😍', '😘', '🥰', '😜', '🤪', '🤩', '🥳', '😏', '😮', '😯', '😲', '😳', '🥺', '😢', '😭', '😤', '😠', '😡', '🤬', '🤯', '😱', '😨', '😰', '😥', '😓', '🤔', '🤭', '🤫', '🤥', '😶', '😐', '😑', '🙄', '😬', '😧', '😦', '😩', '😪', '😴', '🤧', '😷', '🤒', '🤕', '🤑', '🤠', '😇', '🥳', '🥸', '🥺', '🤡', '🤖', '👽', '👾', '👻', '💀', '👹', '👺', '👿', '😈', '🧛‍♂️', '🧟‍♂️', '🧞‍♂️', '🧞‍♀️', '🧙‍♂️', '🧙‍♀️', '🧚‍♂️', '🧚‍♀️', '🧜‍♂️', '🧜‍♀️', '🧝‍♂️', '🧝‍♀️'];
-
-        let index = 0;
-        const speed = 125; // Adjust the speed of typing here
-        const typewriterElement = document.getElementById('typewriter');
-
-        function getRandomEmoji() {
-            return randomEmojis[Math.floor(Math.random() * randomEmojis.length)];
-        }
-
-        function type() {
-            if (index < text.length) {
-                typewriterElement.innerHTML = text.substring(0, index + 1) + '<span class="random-char">' + getRandomEmoji() + '</span>';
-                index++;
-                setTimeout(type, speed);
-            } else {
-                typewriterElement.innerHTML = text + '.';
-            }
-        }
-
-        type();
-    </script>
+    <button id="enterButton" class="hidden">Click To Enter</button>
+    <script src="index.js"></script>
 </body>
 
 </html>
